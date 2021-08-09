@@ -1,3 +1,11 @@
-spring.kafka:
-  bootstrap-servers: localhost:29092
-  consumer.auto-offset-reset: earliest
+spring:
+  jpa.hibernate.ddl-auto: create-drop
+  kafka:
+    bootstrap-servers: localhost:29092
+    consumer.auto-offset-reset: earliest
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    password: postgres
+    username: postgres
+
+#kafka-demo:
