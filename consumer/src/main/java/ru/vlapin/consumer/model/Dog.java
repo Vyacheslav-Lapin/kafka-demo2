@@ -12,7 +12,6 @@ import javax.persistence.Id;
 import javax.persistence.Version;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.EqualsAndHashCode.Include;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
@@ -33,7 +32,6 @@ public class Dog {
 
   //region id and version
   @Id
-  @Include
   @GeneratedValue
   @Column(updatable = false, nullable = false)
   UUID id;
