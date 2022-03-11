@@ -14,7 +14,9 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
 import ru.vlapin.kafkademo2.common.Functions;
 
-public interface KafkaProducerService {
+public sealed interface KafkaProducerService
+    permits KafkaProducerServiceImpl {
+
   void produceMessages();
 }
 
@@ -22,7 +24,7 @@ public interface KafkaProducerService {
 @RequiredArgsConstructor
 @ExtensionMethod(Functions.class)
 @ConfigurationProperties("kafka-demo")
-class KafkaProducerServiceImpl implements KafkaProducerService {
+final class KafkaProducerServiceImpl implements KafkaProducerService {
 
   KafkaTemplate<String, String> template;
 
@@ -44,11 +46,11 @@ class KafkaProducerServiceImpl implements KafkaProducerService {
     template.send(topicName, getIndexGenerator().get())
         .addCallback(
             result -> log.info("Keyless message was send successfully!!! This is the result: {}", result),
-            ex -> log.error("Keyless message was send with error - Kafka error: {}", ex.toString()));
+            ex -> log.error("Keyless message was send with error - Kafka error: ", ex));
 
     template.send(topicName, key, getIndexGenerator().get())
         .addCallback(
             result -> log.info("Message with key was send successfully!!! This is the result: {}", result),
-            ex -> log.error("Message with key was send with error - Kafka error: {}", ex.toString()));
+            ex -> log.error("Message with key was send with error - Kafka error: ", ex));
   }
 }

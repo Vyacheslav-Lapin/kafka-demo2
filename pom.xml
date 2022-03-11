@@ -34,15 +34,15 @@
     <!--endregion-->
 
     <!--region BOMs -->
-    <spring-boot.version>2.6.0-SNAPSHOT</spring-boot.version>
+    <spring-boot.version>2.6.4</spring-boot.version>
     <!--endregion-->
 
     <!--region Libs -->
     <vavr.version>0.10.4</vavr.version>
-    <checker.version>3.21.2</checker.version>
+    <checker.version>3.21.3</checker.version>
     <annotations.version>23.0.0</annotations.version>
     <jcip-annotations.version>1.0</jcip-annotations.version>
-    <spotbugs.version>4.5.3</spotbugs.version>
+    <spotbugs.version>4.6.0</spotbugs.version>
     <error_prone_annotations.version>2.11.0</error_prone_annotations.version>
     <!--endregion-->
 
