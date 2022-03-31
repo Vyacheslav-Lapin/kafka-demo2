@@ -13,6 +13,7 @@ import org.springframework.kafka.config.TopicBuilder;
 public class KafkaDemo2ConsumerApplication {
 
   public static void main(String[] args) {
+    //noinspection resource
     SpringApplication.run(KafkaDemo2ConsumerApplication.class, args);
   }
 

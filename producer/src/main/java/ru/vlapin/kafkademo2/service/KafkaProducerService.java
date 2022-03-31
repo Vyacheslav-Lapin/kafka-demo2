@@ -14,8 +14,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
 import ru.vlapin.kafkademo2.common.Functions;
 
-public sealed interface KafkaProducerService
-    permits KafkaProducerServiceImpl {
+public interface KafkaProducerService{
 
   void produceMessages();
 }
@@ -24,7 +23,7 @@ public sealed interface KafkaProducerService
 @RequiredArgsConstructor
 @ExtensionMethod(Functions.class)
 @ConfigurationProperties("kafka-demo")
-final class KafkaProducerServiceImpl implements KafkaProducerService {
+class KafkaProducerServiceImpl implements KafkaProducerService {
 
   KafkaTemplate<String, String> template;
 

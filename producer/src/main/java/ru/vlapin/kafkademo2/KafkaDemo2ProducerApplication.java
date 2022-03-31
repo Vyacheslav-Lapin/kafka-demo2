@@ -19,6 +19,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 public class KafkaDemo2ProducerApplication {
 
   public static void main(String[] args) {
+    //noinspection resource
     SpringApplication.run(KafkaDemo2ProducerApplication.class, args);
   }
 
