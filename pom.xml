@@ -10,7 +10,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.6.5</version>
+    <version>2.7.1</version>
   </parent>
 
   <groupId>ru.vlapin</groupId>
@@ -34,16 +34,16 @@
     <!--endregion-->
 
     <!--region BOMs -->
-    <spring-boot.version>2.6.5</spring-boot.version>
+    <spring-boot.version>2.7.0-RC1</spring-boot.version>
     <!--endregion-->
 
     <!--region Libs -->
     <vavr.version>0.10.4</vavr.version>
-    <checker.version>3.21.3</checker.version>
+    <checker.version>3.22.2</checker.version>
     <annotations.version>23.0.0</annotations.version>
     <jcip-annotations.version>1.0</jcip-annotations.version>
-    <spotbugs.version>4.6.0</spotbugs.version>
-    <error_prone_annotations.version>2.11.0</error_prone_annotations.version>
+    <spotbugs.version>4.7.1</spotbugs.version>
+    <error_prone_annotations.version>2.14.0</error_prone_annotations.version>
     <!--endregion-->
 
     <!--region Plugins-->
@@ -52,7 +52,7 @@
     <maven.compiler.parameters>true</maven.compiler.parameters>
     <maven-surefire-plugin.version>3.0.0-M4</maven-surefire-plugin.version>
     <maven-enforcer-plugin.version>3.0.0-M3</maven-enforcer-plugin.version>
-    <versions-maven-plugin.version>2.7</versions-maven-plugin.version>
+    <versions-maven-plugin.version>2.11.0</versions-maven-plugin.version>
     <sonar-maven-plugin.version>3.9.0.2155</sonar-maven-plugin.version>
     <spotbugs-maven-plugin.version>4.0.0</spotbugs-maven-plugin.version>
     <lombok-maven-plugin.version>1.18.20.0</lombok-maven-plugin.version>
